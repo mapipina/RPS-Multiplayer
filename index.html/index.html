@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital RPS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+	<!-- Stylesheet links -->
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- links to library + database -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+		<h1>Rock Paper Scissors</h1>
+	</nav>
+
+	<div class="container">
+		<div class="row col-md-6 justify-content-center" id="form">
+			<form id="add-player">
+				<input type="text" name="player-name" placeholder="Name" id="name-input">
+				<input class="btn btn-primary" id="submit-name" type="submit" value="Submit">
+			</form>
+		</div>
+		<div class="row justify-content-around">
+			<div class="col-md-3 boxes">
+				<p>
+					Waiting for Player 1
+				</p>
+			</div>
+			<div class="col-md-3 boxes">Results</div>
+			<div class="col-md-3 boxes">
+				<p>
+				Waiting for Player 2
+				</p>
+			</div>
+		</div>
+	<!--	<div class="row" id="chatbox">
+			<div class="cold-md-8 justify-content-center">
+				<textarea id="chat" name="chat-box" placeholder="Say hello to your opponent">
+				</textarea>
+			</div>
+		</div> -->
+	</div>
+
+	<script type="text/javascript" src="../assets/js/game.js"></script>
+
+</body>
+</html>

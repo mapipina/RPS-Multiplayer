@@ -1,0 +1,22 @@
+body {
+/*  padding-top: 3.5rem; */
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+	padding-top: 5%;
+}
+
+.boxes {
+	border: 2px dotted green;
+}
+
+#form {
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+
+#chatbox {
+	width: 100%;
+	height: 50px;
+}
