@@ -1,15 +1,15 @@
   // Initialize Firebase
-  // var config = {
-  //   apiKey: "AIzaSyBrS7Gmay1EPSspmnPMilfk-LNTGf_1jzk",
-  //   authDomain: "rps-multiplayer-ac69b.firebaseapp.com",
-  //   databaseURL: "https://rps-multiplayer-ac69b.firebaseio.com",
-  //   projectId: "rps-multiplayer-ac69b",
-  //   storageBucket: "rps-multiplayer-ac69b.appspot.com",
-  //   messagingSenderId: "237597751877"
-  // };
-  // firebase.initializeApp(config);
+  var config = {
+    apiKey: "AIzaSyBrS7Gmay1EPSspmnPMilfk-LNTGf_1jzk",
+    authDomain: "rps-multiplayer-ac69b.firebaseapp.com",
+    databaseURL: "https://rps-multiplayer-ac69b.firebaseio.com",
+    projectId: "rps-multiplayer-ac69b",
+    storageBucket: "rps-multiplayer-ac69b.appspot.com",
+    messagingSenderId: "237597751877"
+  };
+  firebase.initializeApp(config);
 
-  // var database = firebase.database();
+  var database = firebase.database();
 
   // need variables for player 1 and player 2
   var playerONE = "";
@@ -21,9 +21,17 @@
     playerONE = userInput;
     console.log(playerONE);
     console.log(userInput);
-  })
+  });
+
+  // need to update the player box to reflect name and choices
   // we need to update Firebase to upload the names of these players
   // max of 2 players allowed
   // there needs to be a toggle jquery untion for Hi NAME! You are Player i
   // needs to be variables for wins and losses that is recorded in the database
+  var p1Wins = 0;
+  p1Losses = 0;
+  p2Wins = 0;
+  p2Losses = 0;
   // needs to be toggle function for wins and losses at the bottom of each player box
+  // need record object for player
+  var players = [{losses: 0, name:"", wins: 0,}]
