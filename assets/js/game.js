@@ -11,7 +11,7 @@
 
   var database = firebase.database();
 
-  // need variables for player 1 and player 2
+// need variables for player 1 and player 2
   var playerONE = "";
   var playerTWO = "";
 
@@ -53,10 +53,10 @@
     console.log(snapshot.val().wins);
     console.log(snapshot.val().losses);
 
-    var player1Name = (snapshot.val().name);
+    playerONE = (snapshot.val().name);
     wins = (snapshot.val().wins);
     losses = (snapshot.val().losses);
-    $("#p1").text(player1Name);
+    $("#p1").text(playerONE);
     $("#p1-box").append("<div>" + "Wins:" + wins + " Losses:" + losses + "</div>");
   });
 
@@ -73,7 +73,7 @@
       var greeting = "Hi " + playerTWO + "! You are Player 2"
       $("#form").text(greeting);
     // we need to update Firebase to upload the names of these players
-      database.ref('players/').child('player2').update({
+      database.ref('players').child('player2').update({
         name: playerTWO, 
         wins: p2Wins, 
         losses: p2Losses})
@@ -83,14 +83,21 @@
 
   function updatePlayerTWO () {
   //  var record = database.ref('players/').child('player1');
-    if (playerONE !== null) {
+    if (playerOne !== null) {
       newUser();
     }
     };
 
-
+  var turnCounter = 0;
   // max of 2 players allowed
-  // there needs to be a toggle jquery function for Hi NAME! You are Player i
-
-  // needs to be toggle function for wins and losses at the bottom of each player box
   // function for gameplay once both players are live
+    // gameplay needs to SHOW players options between rock, paper, scissors
+    var choices = [rock, paper, scissors]
+    // on.click event listeners need to listen to each player's choice
+    // within the on.click event listeners IF statements comparing the choices
+    // either player's win/loss counter needs to be updated
+    // win/loss counter AND turn counter need to be sent to database
+    // if player refreshes or closes browser, they're out of the game 
+    // record in db is then deleted
+
+
