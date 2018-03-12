@@ -1,19 +1,32 @@
 body {
-  padding-top: 3.5rem; */
+  padding-top: 3.5rem;
   font-family: 'Raleway', sans-serif;
+  background-image: url(../images/playstation-pattern.png);
+}
+
+nav {
+	margin-bottom: 5%;
+	background-color: #52BE80;
+}
+
+#game-title {
+	text-align: center;
+	margin-left: 35%;
+	color: white;
 }
 
 .container {
-	padding-top: 5%;
+	margin-top: 8%;
 }
 
 .boxes {
 	border: 2px dotted green;
+	background-color: white;
 }
 
 #form {
 	margin-bottom: 2%;
-	/* margin-top: 2%; */
+	margin-top: 2%;
 }
 
 #chatbox {
@@ -23,4 +36,9 @@ body {
 
 #content-box {
 	min-height: 200px;
+}
+
+#name-input {
+	border-style: dotted;
+	min-height: 38px;
 }

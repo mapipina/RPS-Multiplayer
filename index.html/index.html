@@ -12,13 +12,13 @@
 	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-		<h1>Rock Paper Scissors</h1>
+	<nav class="navbar fixed-top">
+		<h1 id="game-title">Rock Paper Scissors</h1>
 	</nav>
 
 	<div class="container">
-		<div class="row col-md-6 justify-content-center" id="form">
-			<form id="add-player">
+		<div class="row justify-content-center" id="form">
+			<form class="col-md-6" id="add-player">
 				<input type="text" name="player-name" placeholder="Name" id="name-input">
 				<input class="btn btn-primary" id="submit-name" type="submit" value="Submit">
 			</form>

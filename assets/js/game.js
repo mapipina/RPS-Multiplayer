@@ -27,33 +27,26 @@
     playerONE = userInput;
     console.log(playerONE);
     console.log(userInput);
-
+  // clear out the name form
+    $("#name-input").val("");
+  // we need to update Firebase to upload the names of these players
     database.ref('players').push({
       name: playerONE, 
       wins: p1Wins, 
       losses: p1Losses})
   });
 
-  // function createNewPlayer(name, losses, wins){
-  //   var players =  {
-  //     name: playerONE, 
-  //     wins: p1Wins, 
-  //     losses: p1Losses
-  //   };
-
-  //   var newPlayerKey = database.ref().child('players').push().key;
-  //   var updates = {};
-  //   players = updates['/players/' + newPlayerKey];
-
-  //   return database.ref().update(updates);
-  // };
-  // createNewPlayer();
 
   // need to update the player box to reflect name and choices
-  // we need to update Firebase to upload the names of these players
+  database.ref('players/').on("value", function(snapshot){
+    //console logging everything first 
+    console.log(snapshot.val());
+    console.log(snapshot.val().name);
+    console.log(snapshot.val().wins);
+    console.log(snapshot.val().losses);
+  });
+
   // max of 2 players allowed
   // there needs to be a toggle jquery untion for Hi NAME! You are Player i
 
   // needs to be toggle function for wins and losses at the bottom of each player box
-  // need record object for player
-  // var players = [{losses: 0, name:"", wins: 0,}]
