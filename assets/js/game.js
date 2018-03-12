@@ -20,6 +20,11 @@
   p1Losses = 0;
   // p2Wins = 0;
   // p2Losses = 0;
+  var toggleForm = function(){
+    $("form").hide();
+    var greeting = "Hi " + playerONE + "! You are Player 1"
+    $("#form").text(greeting);
+  };
   // variables need to take the value from the form box
   $("form").eq(0).submit(function(event){
     event.preventDefault();
@@ -29,6 +34,8 @@
     console.log(userInput);
   // clear out the name form
     $("#name-input").val("");
+  // need to inform user that they are player i
+    toggleForm();
   // we need to update Firebase to upload the names of these players
     database.ref('players').push({
       name: playerONE, 
@@ -45,6 +52,7 @@
     console.log(snapshot.val().wins);
     console.log(snapshot.val().losses);
   });
+
 
   // max of 2 players allowed
   // there needs to be a toggle jquery untion for Hi NAME! You are Player i
