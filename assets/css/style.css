@@ -1,11 +1,10 @@
 body {
-  padding-top: 3.5rem;
-  font-family: 'Raleway', sans-serif;
-  background-image: url(../images/playstation-pattern.png);
+	padding-top: 3.5rem;
+  	background-image: url(../images/playstation-pattern.png);
 }
 
 nav {
-	margin-bottom: 5%;
+	margin-bottom: 10%;
 	background-color: #52BE80;
 }
 
@@ -13,6 +12,10 @@ nav {
 	text-align: center;
 	margin-left: 35%;
 	color: white;
+}
+
+#game-play {
+	font-family: 'Raleway', sans-serif;
 }
 
 .container {
