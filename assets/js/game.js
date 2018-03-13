@@ -88,16 +88,73 @@
     }
     };
 
-  var turnCounter = 0;
-  // max of 2 players allowed
-  // function for gameplay once both players are live
-    // gameplay needs to SHOW players options between rock, paper, scissors
-    var choices = [rock, paper, scissors]
-    // on.click event listeners need to listen to each player's choice
-    // within the on.click event listeners IF statements comparing the choices
-    // either player's win/loss counter needs to be updated
-    // win/loss counter AND turn counter need to be sent to database
-    // if player refreshes or closes browser, they're out of the game 
-    // record in db is then deleted
+// PSEUDO-CODING THE ENTIRE GAMEPLAY WITH THE EXCEPTION OF CHAT
+
+  // var turnCounter = 0;
+  // p1Choice = $("#p1-box.choices-div").val();
+  // p2Choice = $("#p2-box.choices-div").val();
+  // // max of 2 players allowed - not sure how the fuck to do this besides hiding form
+  // // on.click event listeners need to listen to each player's choice
+  // var playerChoices =  $(".player-boxes").click(function(){
+  // // within the on.click event listeners IF statements comparing the choices
+  //     if (p1Choice === 'rock' && p2Choice === 'scissors') {
+  //     // either player's win/loss counter needs to be updated
+  //       p1Wins++;
+  //       p2Losses++;
+  //       turnCounter++;
+  //     } else if (p1Choice === 'paper' && p2Choice === 'rock') {
+  //       p1Wins++;
+  //       p2Losses++;
+  //       turnCounter++;
+  //     } else if (p1Choice === 'scissors' && p2Choice === 'paper') {
+  //       p1Wins++;
+  //       p2Losses++;
+  //       turnCounter++;
+  //     } else if (p1Choice === p2Choice) {
+  //       turnCounter++;
+  //     } else if (p2Choice === 'rock' && p1Choice === 'scissors') {
+  //       p2Wins++;
+  //       p1Losses++;
+  //       turnCounter++;
+  //     } else if (p2Choice === 'paper' && p1Choice === 'rock') {
+  //       p2Wins++;
+  //       p1Losses++;
+  //       turnCounter++;
+  //     } else if (p2Choice === 'scissors' && p1Choice === 'paper') {
+  //       p2Wins++;
+  //       p1Losses++;
+  //       turnCounter++;
+  //     }
+  //   });
+
+
+
+  // // function for gameplay once both players are live
+  // function initiateGame (){
+  // // gameplay needs to SHOW players options between rock, paper, scissors
+  //   var choices = [rock, paper, scissors];
+  //   choicesDiv = $("<div>").addClass("choices-div")
+  //   choicesDiv.append(choices);
+  //   $(".player-boxes").append(choicesDiv);
+  //   playerChoices();
+  //   // win/loss counter AND turn counter need to be sent to database
+  //   document.ref('players').child('player1').update({
+  //     wins: p1Wins, 
+  //     losses: p1Losses
+  //   });
+  //   document.ref('players').child('player2').update({
+  //     wins: p2Wins,
+  //     losses: p2Losses
+  //   });
+  //   // if player refreshes or closes browser, they're out of the game
+  //   // not sure how to make it player-specific just yet
+  //   if (sessionStorage.getItem('is_reloaded')) {
+  //     //need to stop game
+  //     // record in db is then deleted
+  //     database.ref('players').child('player1').remove()
+  //   };
+    
+  // };
+    
 
 
